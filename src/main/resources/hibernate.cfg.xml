@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--<property name="connection.driver_class">com.sql.jdbc.Driver</property>-->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">kapish@1</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <mapping class="com.groupId.entities.Employee"/>
+        <mapping class="com.groupId.entities.Department"/>
+        <mapping class="com.groupId.entities.User"/>
+        <mapping class="com.groupId.entities.Product"/>
+        <mapping class="com.groupId.entities.Material"/>
+
+        <!--<mapping class="com.groupId.entities.Customer"/>
+        <mapping class="com.groupId.entities.Order"/>-->
+        <mapping class="com.groupId.entities.User1"/>
+        <mapping class="com.groupId.entities.Vehicle"/>
+        <!--<mapping class="com.groupId.utils.EmpTest"/>-->
+
+
+    </session-factory>
+</hibernate-configuration>
